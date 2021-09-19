@@ -18,7 +18,7 @@ app.use('/', express.static(__dirname + '/manifest.webmanifest'));
 // app.set('view engine', 'ejs')
 
 
-app.get('', (req, res) => {
+app.get('/', (req, res) => {
     // res.send('hello world!!!!');
     res.sendFile(__dirname + '/index.html');
     // *** FOR EJS ONLY *** //////
@@ -32,7 +32,8 @@ app.get('', (req, res) => {
 
 
 // Listen on port 3000
-app.listen(port, () => {console.info(`Listen on port ${port}`)})
+// app.listen(port, () => {console.info(`Listen on port ${port}`)})
+app.listen(process.env.PORT || 3000, () => console.log('App available on http://localhost:3000'));
 
 
 

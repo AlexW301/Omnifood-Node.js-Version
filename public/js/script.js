@@ -1,9 +1,9 @@
-console.log("hello world");
+// console.log("hello world");
 
-const myName = "Alex Waller";
-console.log(myName);
-const h1 = document.querySelector(".heading-primary");
-console.log(h1);
+// const myName = "Alex Waller";
+// console.log(myName);
+// const h1 = document.querySelector(".heading-primary");
+// console.log(h1);
 
 // h1.addEventListener("click", function () {
 //   h1.textContent = "Alex Waller";
@@ -100,7 +100,7 @@ function checkFlexGap() {
   document.body.appendChild(flex);
   var isSupported = flex.scrollHeight === 1;
   flex.parentNode.removeChild(flex);
-  console.log(isSupported);
+  // console.log(isSupported);
 
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
 }
