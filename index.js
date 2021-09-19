@@ -1,4 +1,6 @@
-const {readFile} = require('fs').promises;
+// const {readFile} = require('fs').promises;
+// const https = require('https');
+// const fs = require('fs');
 
 const express = require('express');
 const app = express();
@@ -16,6 +18,19 @@ app.use('/', express.static(__dirname + '/manifest.webmanifest'));
 // Set Views
 // app.set('views', './')
 // app.set('view engine', 'ejs')
+
+
+// *** FOR HTTPS *** //////
+// const options = {
+//     key: fs.readFileSync('key.pem'),
+//     cert: fs.readFileSync('cert.pem')
+// }
+
+// https.createServer(options, function (req, res) {
+//     res.writeHead(200);
+//     res.end();
+// }).listen(8000)
+
 
 
 app.get('/', (req, res) => {
