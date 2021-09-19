@@ -2,7 +2,7 @@ const {readFile} = require('fs').promises;
 
 const express = require('express');
 const app = express();
-const port = 3000
+const port = 8080
 
 // Static Files
 app.use(express.static('public'));
@@ -31,9 +31,9 @@ app.get('/', (req, res) => {
 
 
 
-// Listen on port 3000
-// app.listen(port, () => {console.info(`Listen on port ${port}`)})
-app.listen(process.env.PORT || 3000, () => console.log('App available on http://localhost:3000'));
+// Listen on port 8080
+app.listen(port, () => {console.info(`Listen on port ${port}`)})
+// app.listen(process.env.PORT || 3000, () => console.log('App available on http://localhost:3000'));
 
 
 
